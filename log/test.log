@@ -1,0 +1,125 @@
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Thomas/newyears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Thomas/newyears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Thomas/newyears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Thomas/newyears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.1ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Thomas/newyears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Thomas/newyears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
