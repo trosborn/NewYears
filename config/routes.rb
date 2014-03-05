@@ -1,4 +1,6 @@
 Goalsy::Application.routes.draw do
+  resources :goals
+
   get "welcome/index"
   resources :posts
 
