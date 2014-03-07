@@ -16,6 +16,7 @@
 
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
+    <%= javascript_include_tag "application" %>
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
@@ -23,9 +24,18 @@
 
   <body>
 
-    <%= yield %>
+    <ul class="hmenu">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items' %>
+    </ul>
 
-    
-    <%= javascript_include_tag "application" %>
+
+    <% flash.each do |key, value| %>
+      <div class="alert-box round <%= flash_class(key) %>">
+        <%=value %>
+      </div>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>

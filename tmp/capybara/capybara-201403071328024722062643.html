@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title>Untitled</title>
+
+    <script src="/assets/application.js"></script>
+  	<link href="/assets/application.css" media="screen" rel="stylesheet" />
+  	<script src="/assets/vendor/custom.modernizr.js"></script>
+    
+  </head>
+
+  <body>
+
+    <ul class="hmenu">
+        <li>
+  <a href="/users/sign_up">Sign Up</a>
+  </li>
+
+        <li>
+  <a href="/users/sign_in">Login</a>
+  </li>
+
+    </ul>
+
+
+      <div class="alert-box round alert">
+        Invalid email or password.
+      </div>
+
+    <h2>Sign in</h2>
+
+<form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <div><label for="user_email">Email</label><br />
+  <input autofocus="autofocus" id="user_email" name="user[email]" type="email" value="email@example.com" /></div>
+
+  <div><label for="user_password">Password</label><br />
+  <input id="user_password" name="user[password]" type="password" /></div>
+
+    <div><input name="user[remember_me]" type="hidden" value="0" /><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /> <label for="user_remember_me">Remember me</label></div>
+
+  <div><input name="commit" type="submit" value="Sign in" /></div>
+</form>
+
+  <a href="/users/sign_up">Sign up</a><br />
+
+  <a href="/users/password/new">Forgot your password?</a><br />
+
+
+
+
+
+  </body>
+</html>

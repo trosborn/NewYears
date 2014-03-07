@@ -8,6 +8,8 @@ group :test do
   gem "launchy"
 end
 
+gem 'devise'
+
 gem 'minitest-rails'
 
 # Use sqlite3 as the database for Active Record
