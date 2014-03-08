@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: myapp_development
+  database: newyears_development
   pool: 5
   password:
 
@@ -16,13 +16,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: myapp_test
+  database: newyears_test
   pool: 5
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: myapp_production
+  database: newyears_production
   pool: 5
   password:
