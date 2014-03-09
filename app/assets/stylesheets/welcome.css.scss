@@ -1,3 +1,30 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.myhead{
+margin-top: 0px; margin-left: 0px; padding-top: 130px;  padding-bottom: 0px;
+ background: url("growing_tree_long.jpg") no-repeat;  background-size: 100%; background-position: center center;
+}
+
+.myfoot{
+  background-color: #78CA9B;
+  padding: 10px 0 5px 0;
+  text-align: left
+}
+
+.dark{
+  background-color: #279556;
+  padding: 10px 0 0px 0;
+}
+.lightT{
+  color: #FFF; text-align: right;
+}
+
+.main{
+  padding: 10px 0 20px 0;
+  font-color: #FFF;
+}
+.color{
+  background-color: #c9c1d4;
+}

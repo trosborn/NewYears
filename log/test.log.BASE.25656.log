@@ -1,0 +1,1464 @@
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Thomas/newyears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Thomas/newyears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Thomas/newyears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Thomas/newyears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.1ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Thomas/newyears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Thomas/newyears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Thomas/newyears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/Users/Thomas/.rvm/gems/ruby-1.9.3-p194/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+Unable to load goal, underlying cause No such file to load -- goal 
+
+ /usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `block in require'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:214:in `load_dependency'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:229:in `require'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:330:in `require_or_load'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:289:in `depend_on'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/dependencies.rb:207:in `require_dependency'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/Users/Alicia/RubyProject/NewYears/test/test_helper.rb:9:in `<class:TestCase>'
+/Users/Alicia/RubyProject/NewYears/test/test_helper.rb:8:in `<top (required)>'
+/Users/Alicia/RubyProject/NewYears/test/features/goals/creating_a_goal_test.rb:1:in `require'
+/Users/Alicia/RubyProject/NewYears/test/features/goals/creating_a_goal_test.rb:1:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/usr/local/rvm/gems/ruby-2.0.0-p353/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "goals"[0m
+SQLite3::SQLException: no such table: goals: DELETE FROM "goals"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-03 05:50:35', '2014-03-03 05:50:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-03 05:50:35', '2014-03-03 05:50:35', 298486374)
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-02 21:50:35 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 4970ms (Views: 4945.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 03 Mar 2014 05:50:40 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Mon, 03 Mar 2014 05:50:40 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-02 21:50:40 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-03 05:56:56', '2014-03-03 05:56:56', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-03 05:56:56', '2014-03-03 05:56:56', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-03 05:56:56', '2014-03-03 05:56:56', 501507362)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-02 21:56:56 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (19.1ms)
+  Rendered goals/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 150ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Mon, 03 Mar 2014 05:56:57 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Mon, 03 Mar 2014 05:56:57 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.8ms)
+  Rendered goals/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Mon, 03 Mar 2014 05:56:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 03 Mar 2014 05:56:57 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Mon, 03 Mar 2014 05:56:57 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-02 21:56:57 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:35:04', '2014-03-05 04:35:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:35:04', '2014-03-05 04:35:04', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:35:04', '2014-03-05 04:35:04', 501507362)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------
+GoalsHelperTest: test_sanity
+----------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:35:06', '2014-03-05 04:35:06', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:35:06', '2014-03-05 04:35:06', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:35:06', '2014-03-05 04:35:06', 501507362)[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+GoalsControllerTest: test_create
+--------------------------------
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goals"[0m
+Processing by GoalsController#create as HTML
+  Parameters: {"goal"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------
+GoalsControllerTest: test_destroy
+---------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goals"[0m
+Processing by GoalsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "goals" WHERE "goals"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/goals
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goals"
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+GoalsControllerTest: test_edit
+------------------------------
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190962"]]
+  Rendered goals/_form.html.erb (48.6ms)
+Completed 200 OK in 139ms (Views: 137.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------
+GoalsControllerTest: test_index
+-------------------------------
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by GoalsController#index as HTML
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals"
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------
+GoalsControllerTest: test_new
+-----------------------------
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (2.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------
+GoalsControllerTest: test_show
+------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+GoalsControllerTest: test_update
+--------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by GoalsController#update as HTML
+  Parameters: {"goal"=>{}, "id"=>"980190962"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:36:52', '2014-03-05 04:36:52', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:36:52', '2014-03-05 04:36:52', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:36:52', '2014-03-05 04:36:52', 501507362)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------
+GoalsHelperTest: test_sanity
+----------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:37:31', '2014-03-05 04:37:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:37:31', '2014-03-05 04:37:31', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:37:31', '2014-03-05 04:37:31', 501507362)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (46.0ms)
+  Rendered goals/new.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 140ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:37:31 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:37:31 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.3ms)
+  Rendered goals/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:37:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:37:31 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:37:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:37:31 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:43:21', '2014-03-05 04:43:21', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:43:21', '2014-03-05 04:43:21', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:43:21', '2014-03-05 04:43:21', 501507362)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (44.0ms)
+  Rendered goals/new.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 144ms (Views: 120.4ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:43:21 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:43:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.5ms)
+  Rendered goals/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:43:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:43:21 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:43:21 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:43:21 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:44:08', '2014-03-05 04:44:08', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:44:08', '2014-03-05 04:44:08', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:44:08', '2014-03-05 04:44:08', 501507362)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (45.6ms)
+  Rendered goals/new.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 148ms (Views: 122.8ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:44:08 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:44:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (3.0ms)
+  Rendered goals/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:44:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:44:08 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:44:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:44:08 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:44:31', '2014-03-05 04:44:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:44:31', '2014-03-05 04:44:31', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:44:31', '2014-03-05 04:44:31', 501507362)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:44:31 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (46.4ms)
+  Rendered goals/new.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 142ms (Views: 117.7ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:44:32 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:44:32 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.5ms)
+  Rendered goals/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:44:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:44:32 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:44:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:44:32 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:45:56', '2014-03-05 04:45:56', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:45:56', '2014-03-05 04:45:56', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:45:56', '2014-03-05 04:45:56', 501507362)[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:45:56 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (47.2ms)
+  Rendered goals/new.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 150ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:45:57 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:45:57 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (3.5ms)
+  Rendered goals/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:45:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:45:57 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:45:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:45:57 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:47:21', '2014-03-05 04:47:21', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:47:21', '2014-03-05 04:47:21', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:47:21', '2014-03-05 04:47:21', 501507362)[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (37.0ms)
+  Rendered goals/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 99ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:47:21 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:47:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.5ms)
+  Rendered goals/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:47:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:47:21 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:47:21 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:47:21 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:49:28', '2014-03-05 04:49:28', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:49:28', '2014-03-05 04:49:28', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:49:28', '2014-03-05 04:49:28', 501507362)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:49:28 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (48.8ms)
+  Rendered goals/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 155ms (Views: 123.4ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:49:29 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:49:29 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (3.0ms)
+  Rendered goals/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:49:29 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:49:29 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:49:29 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:49:29 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:52:33', '2014-03-05 04:52:33', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:52:33', '2014-03-05 04:52:33', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:52:33', '2014-03-05 04:52:33', 501507362)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (49.4ms)
+  Rendered goals/new.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 154ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:52:33 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:52:33 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.4ms)
+  Rendered goals/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:52:33 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:52:33 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:52:33 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:52:33 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:54:46', '2014-03-05 04:54:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:54:46', '2014-03-05 04:54:46', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:54:46', '2014-03-05 04:54:46', 501507362)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (46.4ms)
+  Rendered goals/new.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 145ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:54:46 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:54:46 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.3ms)
+  Rendered goals/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:54:46 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:54:46 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:54:46 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:54:46 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:57:17', '2014-03-05 04:57:17', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:57:17', '2014-03-05 04:57:17', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:57:17', '2014-03-05 04:57:17', 501507362)[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (45.2ms)
+  Rendered goals/new.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 144ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:57:17 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:57:17 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.4ms)
+  Rendered goals/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:57:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:57:17 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:57:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:57:17 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:58:23', '2014-03-05 04:58:23', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 04:58:23', '2014-03-05 04:58:23', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 04:58:23', '2014-03-05 04:58:23', 501507362)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (48.6ms)
+  Rendered goals/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 149ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 04:58:23 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 04:58:23 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.5ms)
+  Rendered goals/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 04:58:23 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Mar 2014 04:58:23 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 04:58:23 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 20:58:23 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 05:01:02', '2014-03-05 05:01:02', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-05 05:01:02', '2014-03-05 05:01:02', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-05 05:01:02', '2014-03-05 05:01:02', 501507362)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-04 21:01:02 -0800
+Processing by GoalsController#new as HTML
+  Rendered goals/_form.html.erb (46.1ms)
+  Rendered goals/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 145ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>""}, "commit"=>"Create Goal"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 05:01:03 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", ""], ["title", "Eat healthier"], ["updated_at", Wed, 05 Mar 2014 05:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals"[0m
+  Rendered goals/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+Started DELETE "/goals/298486374" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#destroy as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "298486374"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "goals" WHERE "goals"."id" = ?  [["id", 298486374]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#index as HTML
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals"
+  Rendered goals/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.1ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/_form.html.erb (2.3ms)
+  Rendered goals/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>""}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "goals" SET "title" = ?, "description" = ?, "frequency" = ?, "updated_at" = ? WHERE "goals"."id" = 501507362  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", ""], ["updated_at", Wed, 05 Mar 2014 05:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT 1  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 05 Mar 2014 05:01:03 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 05 Mar 2014 05:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/goals" for 127.0.0.1 at 2014-03-04 21:01:03 -0800
+Processing by GoalsController#index as HTML
+  [1m[35mGoal Load (0.1ms)[0m  SELECT "goals".* FROM "goals"
+  Rendered goals/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

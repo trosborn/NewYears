@@ -13,6 +13,7 @@ $base-font-size: 100% !default;
 
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be a different size and not have it effect grid size too,
+
 // set the value of $em-base to $base-font-size ($em-base: $base-font-size;)
 $em-base: 16px !default;
 
@@ -175,7 +176,7 @@ $default-float: left;
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+ $header-font-color: #D05636;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -247,7 +248,7 @@ $default-float: left;
 
 // $blockquote-font-color: lighten($header-font-color, 30%);
 // $blockquote-padding: em-calc(9, 20, 0, 19);
-// $blockquote-border: 1px solid #ddd;
+ $blockquote-border: 1px solid #E89D89;
 // $blockquote-cite-font-size: em-calc(13);
 // $blockquote-cite-font-color: lighten($header-font-color, 20%);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
@@ -369,7 +370,7 @@ $default-float: left;
 // We use these to control button text styles.
 
 // $button-font-family: inherit;
-// $button-font-color: #fff;
+ $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-med: em-calc(16);
 // $button-font-tny: em-calc(11);
@@ -1255,8 +1256,8 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg-color: #111;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: #78CA9B;
+ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 
