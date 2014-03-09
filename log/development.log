@@ -8418,3 +8418,189 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-08 19:31:33
   [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140211230655')[0m
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140303054526')
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/goals" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+Processing by GoalsController#index as HTML
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals"
+  Rendered goals/index.html.erb within layouts/application (2.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.7ms)
+  Rendered devise/menu/_registration_items.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:13 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/goals.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-08 19:34:14 -0800
+  [1m[36m (120.5ms)[0m  [1mDROP DATABASE IF EXISTS "newyears_test"[0m
+  [1m[35m (344.2ms)[0m  CREATE DATABASE "newyears_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.1ms)[0m  CREATE TABLE "goals" ("id" serial primary key, "title" character varying(255), "description" text, "frequency" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (26.7ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (11.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140307192128')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140211230655')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140303054526')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
