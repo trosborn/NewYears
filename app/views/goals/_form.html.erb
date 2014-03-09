@@ -11,19 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :title, class:"right inline" %><br>
+  </div>
+  <div class="small-9 columns">
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :description, class:"right inline" %>
+  </div>
+  <div class="small-9 columns">
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :frequency %><br>
-    <%= f.text_field :frequency %>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :frequency, class:"right inline" %>
   </div>
-  <div class="actions">
+  <div class="small-9 columns">
+    <%= f.select :frequency, options_for_select(%w[Daily Weekly Monthly]) %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-9 small-offset-3 columns">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
