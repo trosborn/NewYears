@@ -29,18 +29,27 @@
     </div>
     <div class="large-8 columns">
   <div class="section-container auto" data-section>
+    <% @goals.each_with_index do |goal, index| %>
   <section class="section">
-    <p class="title"><a href="#">Sample Goal1</a></p>
+    <p class="title"><a href="#">Goal <%= index+1 %></a></p>
     <div class="content">
-      <p>Sample Goal1</p>
+      <p>
+          <strong>Title:</strong>
+          <%= goal.title %>
+      </p>
+      <p>
+          <strong>Description:</strong>
+          <%= goal.description %>
+      </p>
+      <p>
+          <strong>Frequency:</strong>
+          <%= goal.frequency %>
+      </p>
+      <%= link_to 'Edit', edit_goal_path(goal) %><br>
+      <%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </section>
-  <section class="section">
-    <p class="title"><a href="#">Sample Goal2</a></p>
-    <div class="content">
-      <p>Sample Goal2</p>
-    </div>
-  </section>
+  <% end %>
 	</div>
     </div>
   
