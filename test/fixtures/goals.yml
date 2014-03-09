@@ -7,9 +7,9 @@ one:
   frequency: MyString
 
 two:
-  title: MyString
-  description: MyText
-  frequency: MyString
+  title: MyString2
+  description: MyText2
+  frequency: MyString2
 
 diet:
   title: "Eat healthier"

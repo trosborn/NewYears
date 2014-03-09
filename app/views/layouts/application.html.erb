@@ -14,8 +14,10 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
   	<title><%= content_for?(:title) ? yield(:title) : "Goalsy" %></title>
 
+    <%= javascript_include_tag "application" %>
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
@@ -35,14 +37,20 @@
       <li class="divider"></li>
       <li><%= link_to "New Goal", new_goal_path %></li>
       <li class="divider"></li>
-      <li><%= link_to "Sign In" %></li>
+      <li><%= render 'devise/menu/login_items' %></li>
       <li class="divider"></li>
-      <li><%= link_to "Register" %></li>
+      <li><%= render 'devise/menu/registration_items' %></li>
     </ul>
   </div>
 </nav>
 
   <body>
+
+    <% flash.each do |key, value| %>
+      <div class="alert-box round <%= flash_class(key) %>">
+        <%=value %>
+      </div>
+    <% end %>
 
     <%= yield %>
 

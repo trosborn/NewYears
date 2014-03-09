@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+- "1.9.3"
+
+deploy:
+  provider: heroku
+  app: goalsy
+  api_key: adaa30cc496a263b040db172aa9e2b1e0da82fd9
