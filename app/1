@@ -25,7 +25,8 @@
         <li>Add new goals using the button below:</li>
     </ul>
     <a href="<%= new_goal_path %>" class="button round">Add goal</a>
-    <br><br><br><br><br><br><br><br>
+    <a href="#" class="button round">Add goal</a>
+    <br><br><br><br><br>
     </div>
     <div class="large-8 columns">
   <div class="section-container auto" data-section>

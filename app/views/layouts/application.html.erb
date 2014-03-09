@@ -14,18 +14,49 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "Goalsy" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
+        <!-- Navigation -->
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to "Home", welcome_index_path %></a></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "My Goals", goals_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "New Goal", new_goal_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Sign In" %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Register" %></li>
+    </ul>
+  </div>
+</nav>
+
   <body>
 
     <%= yield %>
 
-    
+    <!-- footer -->    
     <%= javascript_include_tag "application" %>
+    <div class="myfoot">
+      <footer class="row">
+      <div class="large-12 columns">
+        <div class="row">
+            <p class="lightT">&copy; Thomas & Alicia - UW Continuing Education</p>
+        </div>
+      </div>
+      </footer>
+    </div>
+
   </body>
 </html>
