@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 group :test do
-  gem "minitest-rails-capybara"
-  gem "launchy"
+  gem 'minitest-rails-capybara'
+  gem 'launchy'
 end
 
 gem 'devise'
@@ -13,6 +13,8 @@ gem 'devise'
 gem 'minitest-rails'
 
 gem 'pg'
+
+gem 'simple_calendar'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
