@@ -3,6 +3,7 @@ require "test_helper"
 feature "Editing a goal" do
   scenario "I got lazy, and want to make my goal easier" do
 
+    sign_in
     test_goal = goals(:diet)
     visit goal_path(test_goal)
 
