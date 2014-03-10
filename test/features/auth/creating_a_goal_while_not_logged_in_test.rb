@@ -6,7 +6,6 @@ feature "must be signed in to create goal" do
 
     visit new_goal_path
 
-    save_and_open_page
 
     page.must_have_content "You need to sign in or sign up before continuing"
   end
