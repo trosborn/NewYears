@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title>Goalsy</title>
+
+    <script src="/assets/application.js"></script>
+  	<link href="/assets/application.css" media="screen" rel="stylesheet" />
+  	<script src="/assets/vendor/custom.modernizr.js"></script>
+    
+  </head>
+
+        <!-- Navigation -->
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/welcome/index">Home</a></a></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><a href="/goals">My Goals</a></li>
+      <li class="divider"></li>
+      <li><a href="/goals/new">New Goal</a></li>
+      <li class="divider"></li>
+      <li>  <li>
+  <a href="/users/sign_in">Login</a>
+  </li>
+</li>
+      <li class="divider"></li>
+      <li>  <li>
+  <a href="/users/sign_up">Sign Up</a>
+  </li>
+</li>
+    </ul>
+  </div>
+</nav>
+
+  <body>
+
+
+    <div class="row">
+  <div class="large-8 columns">
+    <h1>New goal</h1>
+    <form accept-charset="UTF-8" action="/goals" class="new_goal" id="new_goal" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline" for="goal_title">Title</label><br>
+  </div>
+  <div class="small-9 columns">
+    <input id="goal_title" name="goal[title]" type="text" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline" for="goal_description">Description</label>
+  </div>
+  <div class="small-9 columns">
+    <textarea id="goal_description" name="goal[description]">
+</textarea>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline" for="goal_frequency">Frequency</label>
+  </div>
+  <div class="small-9 columns">
+    <select id="goal_frequency" name="goal[frequency]"><option value="Daily">Daily</option>
+<option value="Weekly">Weekly</option>
+<option value="Monthly">Monthly</option></select>
+  </div>
+</div>
+<div class="row">
+  <div class="small-9 small-offset-3 columns">
+    <input name="commit" type="submit" value="Create Goal" />
+  </div>
+</div>
+</form>
+
+    <a href="/welcome/index">Back</a>
+  </div>
+  <div class="large-4 columns">
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+
+    <!-- footer -->    
+    <script src="/assets/application.js"></script>
+    <div class="myfoot">
+      <footer class="row">
+      <div class="large-12 columns">
+        <div class="row">
+            <p class="lightT">&copy; Thomas & Alicia - UW Continuing Education - 2014</p>
+        </div>
+      </div>
+      </footer>
+    </div>
+
+  </body>
+</html>
