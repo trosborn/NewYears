@@ -5,8 +5,13 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.all
+    if user_signed_in?
+      @goals = current_user.goals.all
+    else
+      @goals = Hash.new
+    end
   end
+
 
   # GET /goals/1
   # GET /goals/1.json
@@ -26,6 +31,7 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
+    @goal.user = current_user
 
     respond_to do |format|
       if @goal.save
