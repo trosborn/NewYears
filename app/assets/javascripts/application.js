@@ -15,5 +15,10 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
+//= require jquery-ui
 
 $(function(){ $(document).foundation(); });
+
+$(function() {
+    $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
+});

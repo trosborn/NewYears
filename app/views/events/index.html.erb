@@ -1,0 +1,38 @@
+<div class="row"> 
+  <div class="large-8 columns">
+<h1>Listing goals records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Goal</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.start_time %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goal Record', new_event_path %>
+
+  </div>
+  <div class="large-4 columns">
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
