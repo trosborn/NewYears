@@ -16,7 +16,8 @@
     <%= f.label :name, class:"right inline" %><br>
   </div>
   <div class="small-9 columns">
-    <%= f.text_field :name %>
+    <%= f.select :name, options_for_select(%w[Goal1 Goal2 Goal3]) %>
+
   </div>
 </div>
 
