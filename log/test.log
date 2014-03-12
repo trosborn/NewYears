@@ -5276,3 +5276,1231 @@ Processing by WelcomeController#index as HTML
   Rendered devise/menu/_registration_items.html.erb (0.1ms)
 Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.7ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "events" DISABLE TRIGGER ALL;ALTER TABLE "goals" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-11 07:43:27', '2014-03-11 07:43:27', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-11 07:43:27', '2014-03-11 07:43:27', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-11 07:43:27', '2014-03-11 07:43:27', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString2', 'MyText2', 'MyString2', '2014-03-11 07:43:27', '2014-03-11 07:43:27', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-11 07:43:27', '2014-03-11 07:43:27', 501507362)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('email@example.com', '$2a$04$o3sVLE4AuLv0JRGyfJoilugjdmTEwS4Vikz76KoJLkaIkVOYk6n72', '2014-03-11 07:43:27', '2014-03-11 07:43:27', 227792459)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ENABLE TRIGGER ALL;ALTER TABLE "goals" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.8ms)
+  Rendered devise/menu/_registration_items.html.erb (0.7ms)
+Completed 200 OK in 118ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 3.7ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.6ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered goals/_form.html.erb (4.8ms)
+  Rendered goals/new.html.erb within layouts/application (5.9ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>"Daily"}, "commit"=>"Create Goal"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", "Daily"], ["title", "Eat healthier"], ["updated_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["user_id", 227792459]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (1.6ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered goals/index.html.erb within layouts/application (0.9ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:27 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:43:27 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/menu/_login_items.html.erb (1.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.8ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered goals/_form.html.erb (2.3ms)
+  Rendered goals/edit.html.erb within layouts/application (3.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.7ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>"Daily"}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "goals" SET "title" = $1, "description" = $2, "frequency" = $3, "updated_at" = $4 WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", "Daily"], ["updated_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (2.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------------------------
+I want to logout Feature Test: test_0001_I click logout and my session ends
+---------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00], ["email", "test@example.com"], ["encrypted_password", "$2a$04$h6T20b4m9Zo0u5.76SgbquymMF/uoCjSvtVnazydR1CHvflLRTdl6"], ["updated_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792460  [["last_sign_in_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 2.0ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792460]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.8ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 38ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by GoalsController#index as HTML
+  Rendered goals/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------------------------------------------
+must be signed in to create goal Feature Test: test_0001_I try to create a goal while logged out, but cannot
+------------------------------------------------------------------------------------------------------------
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by GoalsController#new as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------------------------------------------------------------------
+signing in as existing user Feature Test: test_0001_I want to log back into the site after having created an account
+--------------------------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered devise/menu/_login_items.html.erb (0.4ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459  [["last_sign_in_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:43:28 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:43:28 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "events" DISABLE TRIGGER ALL;ALTER TABLE "goals" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-11 07:44:19', '2014-03-11 07:44:19', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-11 07:44:19', '2014-03-11 07:44:19', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-11 07:44:19', '2014-03-11 07:44:19', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString2', 'MyText2', 'MyString2', '2014-03-11 07:44:19', '2014-03-11 07:44:19', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-11 07:44:19', '2014-03-11 07:44:19', 501507362)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('email@example.com', '$2a$04$MDvKoAH2N/EsoBSLXG2Tm.smz8MnBS0ZXPlCygy5g5JZ/Sve3/TWa', '2014-03-11 07:44:19', '2014-03-11 07:44:19', 227792459)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ENABLE TRIGGER ALL;ALTER TABLE "goals" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.9ms)
+  Rendered devise/menu/_registration_items.html.erb (0.7ms)
+Completed 200 OK in 111ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.4ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 3.6ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.6ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered goals/_form.html.erb (5.0ms)
+  Rendered goals/new.html.erb within layouts/application (6.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>"Daily"}, "commit"=>"Create Goal"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", "Daily"], ["title", "Eat healthier"], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["user_id", 227792459]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (1.8ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered goals/index.html.erb within layouts/application (0.8ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/menu/_login_items.html.erb (1.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered goals/_form.html.erb (2.5ms)
+  Rendered goals/edit.html.erb within layouts/application (3.3ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.6ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>"Daily"}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = $1, "description" = $2, "frequency" = $3, "updated_at" = $4 WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", "Daily"], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (1.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------------------------
+I want to logout Feature Test: test_0001_I click logout and my session ends
+---------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["email", "test@example.com"], ["encrypted_password", "$2a$04$qaAye0.ndHGuhZzNWEIJWuTHNXBdhrrIOwobGuHMUtOn.NE0aZsqi"], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792460  [["last_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 2.0ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792460]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 42ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#index as HTML
+  Rendered goals/index.html.erb within layouts/application (0.3ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------------------------------------------
+must be signed in to create goal Feature Test: test_0001_I try to create a goal while logged out, but cannot
+------------------------------------------------------------------------------------------------------------
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by GoalsController#new as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------------------------------------------------------------------
+signing in as existing user Feature Test: test_0001_I want to log back into the site after having created an account
+--------------------------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.5ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459  [["last_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:44:19 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:44:19 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "events" DISABLE TRIGGER ALL;ALTER TABLE "goals" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-11 07:45:07', '2014-03-11 07:45:07', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-11 07:45:07', '2014-03-11 07:45:07', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-11 07:45:07', '2014-03-11 07:45:07', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString2', 'MyText2', 'MyString2', '2014-03-11 07:45:07', '2014-03-11 07:45:07', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-11 07:45:07', '2014-03-11 07:45:07', 501507362)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('email@example.com', '$2a$04$br0IaHNUlJ0AfScJIA38tu2.bB1M3OFiQwW.Xim6IRvyn6y3B5HWi', '2014-03-11 07:45:07', '2014-03-11 07:45:07', 227792459)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ENABLE TRIGGER ALL;ALTER TABLE "goals" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:07 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.8ms)
+  Rendered devise/menu/_registration_items.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:07 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:07 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.6ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 3.7ms | ActiveRecord: 1.4ms)
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered goals/_form.html.erb (5.4ms)
+  Rendered goals/new.html.erb within layouts/application (6.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>"Daily"}, "commit"=>"Create Goal"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", "Daily"], ["title", "Eat healthier"], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["user_id", 227792459]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (2.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered goals/index.html.erb within layouts/application (0.8ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/menu/_login_items.html.erb (1.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.5ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered goals/_form.html.erb (3.1ms)
+  Rendered goals/edit.html.erb within layouts/application (4.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.8ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>"Daily"}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "goals" SET "title" = $1, "description" = $2, "frequency" = $3, "updated_at" = $4 WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", "Daily"], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (1.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------------------------------
+I want to logout Feature Test: test_0001_I click logout and my session ends
+---------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.4ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["email", "test@example.com"], ["encrypted_password", "$2a$04$.qDUaISbSBfPOdPUigrFDumXHLCAq9QViFj/mafFH552YFLcFsaGu"], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792460  [["last_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 2.0ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792460]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 42ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.4ms)
+  Rendered devise/menu/_registration_items.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#index as HTML
+  Rendered goals/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------------------------------------------
+must be signed in to create goal Feature Test: test_0001_I try to create a goal while logged out, but cannot
+------------------------------------------------------------------------------------------------------------
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by GoalsController#new as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------------------------------------------------------------------
+signing in as existing user Feature Test: test_0001_I want to log back into the site after having created an account
+--------------------------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered devise/menu/_login_items.html.erb (0.5ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459  [["last_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["current_sign_in_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 11 Mar 2014 07:45:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 00:45:08 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (3.1ms)[0m  [1mALTER TABLE "events" DISABLE TRIGGER ALL;ALTER TABLE "goals" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (6.3ms)[0m  INSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-12 00:07:05', '2014-03-12 00:07:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "events" ("name", "start_time", "created_at", "updated_at", "id") VALUES ('MyString', '2014-03-10 03:15:43.000000', '2014-03-12 00:07:05', '2014-03-12 00:07:05', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "goals"
+  [1m[36mFixture Insert (16.3ms)[0m  [1mINSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2014-03-12 00:07:05', '2014-03-12 00:07:05', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "goals" ("title", "description", "frequency", "created_at", "updated_at", "id") VALUES ('MyString2', 'MyText2', 'MyString2', '2014-03-12 00:07:05', '2014-03-12 00:07:05', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "goals" ("title", "description", "created_at", "updated_at", "id") VALUES ('Eat healthier', 'I will not eat fast food this year', '2014-03-12 00:07:05', '2014-03-12 00:07:05', 501507362)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('email@example.com', '$2a$04$jDhr4z6/Fjc1BLHQOvXsVeXCRdFSd0dPG1t2Vr2iPnzPy6cxncK0S', '2014-03-12 00:07:05', '2014-03-12 00:07:05', 227792459)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ENABLE TRIGGER ALL;ALTER TABLE "goals" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------------------------------
+Creating a goal Feature Test: test_0001_I want to create a goal that has a title and a description
+--------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.8ms)
+  Rendered devise/menu/_registration_items.html.erb (0.6ms)
+Completed 200 OK in 151ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.3ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["current_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 4.0ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.6ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 3.3ms | ActiveRecord: 1.0ms)
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered goals/_form.html.erb (7.0ms)
+  Rendered goals/new.html.erb within layouts/application (8.8ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+Started POST "/goals" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat healthier", "description"=>"I will not eat fast food this year", "frequency"=>"Daily"}, "commit"=>"Create Goal"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "goals" ("created_at", "description", "frequency", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["description", "I will not eat fast food this year"], ["frequency", "Daily"], ["title", "Eat healthier"], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["user_id", 227792459]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/980190963
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+Started GET "/goals/980190963" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mGoal Load (0.5ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "980190963"]]
+  Rendered goals/show.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (1.6ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------------
+Deleting a goal Feature Test: test_0001_My goal is bad I want to delete it
+--------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["current_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered goals/index.html.erb within layouts/application (0.8ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------------------------------------
+Editing a goal Feature Test: test_0001_I got lazy, and want to make my goal easier
+----------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459[0m  [["last_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["current_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGoal Load (0.2ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", 501507362]]
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/menu/_login_items.html.erb (1.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+Started GET "/goals/501507362/edit" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#edit as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[35mGoal Load (0.3ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered goals/_form.html.erb (2.6ms)
+  Rendered goals/edit.html.erb within layouts/application (3.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.6ms)
+Started PATCH "/goals/501507362" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "goal"=>{"title"=>"Eat a little healthier", "description"=>"Eat fast food no more than once a week", "frequency"=>"Daily"}, "commit"=>"Update Goal", "id"=>"501507362"}
+  [1m[35mGoal Load (0.5ms)[0m  SELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1  [["id", "501507362"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "goals" SET "title" = $1, "description" = $2, "frequency" = $3, "updated_at" = $4 WHERE "goals"."id" = 501507362[0m  [["title", "Eat a little healthier"], ["description", "Eat fast food no more than once a week"], ["frequency", "Daily"], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/goals/501507362
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+Started GET "/goals/501507362" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#show as HTML
+  Parameters: {"id"=>"501507362"}
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT 1[0m  [["id", "501507362"]]
+  Rendered goals/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/menu/_login_items.html.erb (1.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------------------------------------------------
+I want to logout Feature Test: test_0001_I click logout and my session ends
+---------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
+  Rendered devise/menu/_login_items.html.erb (0.4ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["email", "test@example.com"], ["encrypted_password", "$2a$04$ng3k3w2Xr8MCnFvC4wQoXOvnHJlbkvW2fBQGCU1jCZOAFANZ/AHmC"], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792460  [["last_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["current_sign_in_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 1.8ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792460]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792460 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 43ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------------------------
+Visiting the goals index Feature Test: test_0001_visiting all my goals
+----------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "goals" ("created_at", "description", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00], ["description", "Workout twice a week"], ["title", "Workout more"], ["updated_at", Wed, 12 Mar 2014 00:07:05 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/goals" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#index as HTML
+  Rendered goals/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------------------------------------------
+must be signed in to create goal Feature Test: test_0001_I try to create a goal while logged out, but cannot
+------------------------------------------------------------------------------------------------------------
+Started GET "/goals/new" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by GoalsController#new as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered devise/menu/_login_items.html.erb (0.3ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------------------------------------------------------------------------------
+signing in as existing user Feature Test: test_0001_I want to log back into the site after having created an account
+--------------------------------------------------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:06 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.2ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:06 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered devise/menu/_login_items.html.erb (0.4ms)
+  Rendered devise/menu/_registration_items.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-11 17:07:06 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"email@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'email@example.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 227792459  [["last_sign_in_at", Wed, 12 Mar 2014 00:07:06 UTC +00:00], ["current_sign_in_at", Wed, 12 Mar 2014 00:07:06 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 12 Mar 2014 00:07:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2014-03-11 17:07:06 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 227792459 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 227792459]]
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered devise/menu/_login_items.html.erb (0.1ms)
+  Rendered devise/menu/_registration_items.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
