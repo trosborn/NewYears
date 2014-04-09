@@ -58,6 +58,7 @@ end
 gem 'pundit'
 
 gem "execjs"
+gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
