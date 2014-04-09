@@ -3,16 +3,26 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-group :test do
-  gem 'minitest-rails-capybara'
-  gem 'launchy'
+gem 'devise'
+gem 'omniauth-twitter'
+gem 'figaro'
+
+group :production do
+  gem 'pg', '0.17.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
-gem 'devise'
-
-gem 'minitest-rails'
-
-gem 'pg'
+group :development, :test do
+  gem 'coveralls', require: false
+  gem 'sqlite3'
+  gem 'minitest-rails-capybara'
+  gem 'capybara-webkit'
+  gem "minitest-rails"
+  gem 'turn'
+  gem 'launchy'
+  gem 'pry'
+  gem 'simplecov', require: false
+end
 
 gem 'simple_calendar'
 
