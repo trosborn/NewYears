@@ -19,7 +19,7 @@ group :development, :test do
   gem 'capybara-webkit'
   gem "minitest-rails"
   gem 'turn'
-  gem 'launchy'
+  #gem 'launchy'
   gem 'pry'
   gem 'simplecov', require: false
 end
@@ -56,6 +56,9 @@ group :doc do
 end
 
 gem 'pundit'
+
+gem 'execjs'
+gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
