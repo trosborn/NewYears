@@ -57,7 +57,7 @@ end
 
 gem 'pundit'
 
-gem "execjs"
+gem 'execjs'
 gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
