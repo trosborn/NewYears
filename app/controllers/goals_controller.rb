@@ -5,17 +5,16 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    if user_signed_in?
-      @goals = current_user.goals.all
-    else
-      @goals = Hash.new
-    end
+    @goals = Goal.all
   end
 
 
   # GET /goals/1
   # GET /goals/1.json
   def show
+    @commentable = @goal
+    @comments = @commentable.comments
+    @comment = Comment.new
   end
 
   # GET /goals/new

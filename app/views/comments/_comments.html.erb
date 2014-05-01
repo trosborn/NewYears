@@ -1,0 +1,4 @@
+<% @comments.each do |comment| %>
+  <strong>By: </strong><%= comment.user.name %><br>
+  <strong>Comment: </strong> <%= comment.body %><br>
+<% end %>

@@ -32,7 +32,9 @@
   <section class="top-bar-section">
     <ul class="right">
       <li class="divider"></li>
-      <li><%= link_to "My Goals", goals_path %></li>
+      <li><%= link_to "Goals", goals_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Accomplishments", posts_path %></li>
       <li class="divider"></li>
       <li><%= link_to "My Calendar", mycalendar_index_path %></li>
       <li class="divider"></li>
@@ -53,7 +55,7 @@
 
     <%= yield %>
 
-    <!-- footer -->    
+    <!-- footer -->
     <%= javascript_include_tag "application" %>
     <div class="myfoot">
       <footer class="row">
